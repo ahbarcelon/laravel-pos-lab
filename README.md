@@ -210,23 +210,11 @@ Run `php artisan test`. The feature tests check all four pages and navigation, v
 
 During development, `php artisan test` passed **3 tests with 32 assertions**. `php artisan migrate:fresh --seed` succeeded with eight customers and six POS users. Direct HTTP checks returned **200** for all four pages and both assets on port 8080. A browser-independent JavaScript check exercised search and the mobile-menu toggle. Browser visual and interactive checks remain for final manual verification.
 
-## GitHub repository setup
+## GitHub repository
 
-The repository should be named **`laravel-pos-lab`**. Sign in at [GitHub](https://github.com), choose **New repository**, enter that name, select **public** if your instructor must view it without access or **private** if you will invite them, and leave **Initialize with README / .gitignore / license** unchecked. In PowerShell or the VS Code terminal, from this project folder:
+The project is published in the public [ahbarcelon/laravel-pos-lab repository](https://github.com/ahbarcelon/laravel-pos-lab) on the `main` branch. The source, migrations, seeders, README, `.env.example`, and Composer files are available there. Local secrets, installed dependencies, and the SQLite database are excluded by `.gitignore`.
 
-```powershell
-git config --global user.name "YOUR_NAME"
-git config --global user.email "YOUR_GITHUB_EMAIL_OR_NOREPLY"
-git init
-git add .
-git status --short
-git commit -m "Initial commit: Laravel POS laboratory activity"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/laravel-pos-lab.git
-git push -u origin main
-```
-
-The Git name and email label a commit; they do not create an account. Replace the uppercase values with your own Git identity and GitHub username. Before committing, `git status --short` must **not** list `.env`, `vendor/`, `node_modules/`, or `database/*.sqlite`. Authenticate when Git asks. Open the repository URL and verify the source, migrations, seeders, README, `.env.example`, and Composer files. Do not commit keys, passwords, or private databases. See [GitHub's guide](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github).
+To clone it on another computer, run `git clone https://github.com/ahbarcelon/laravel-pos-lab.git`, enter the cloned folder, and follow the local setup steps above. For future changes, review `git status --short` before committing and keep `.env`, `vendor/`, `node_modules/`, and `database/*.sqlite` out of Git. A Git commit's author name and email only label the commit; they do not create a GitHub account.
 
 ## Deploy to Railway yourself
 
@@ -253,7 +241,7 @@ After final browser verification, capture the dashboard, About page, both direct
 - [x] Shared layout, responsive CSS, search script, migrations, seeders, and README are included.
 - [x] Feature tests, optional migrations/seeders, and local HTTP responses were verified.
 - [ ] Manually verify browser search, mobile layout, and console.
-- [ ] Create and push the GitHub repository; confirm its URL.
+- [x] Create and push the GitHub repository; confirm its URL.
 - [ ] Deploy on Railway and verify the hosted URL.
 - [ ] Submit the GitHub and hosted application links.
 
